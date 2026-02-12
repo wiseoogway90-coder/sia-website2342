@@ -22,7 +22,7 @@ export async function GET(request: NextRequest): Promise<NextResponse<LogsRespon
 
     // Get logs - in a real app, you'd verify the token and check if user is admin
     // For now, we'll just return the logs (should add role check in production)
-    const logs = getAllLoginLogs();
+    const logs = await getAllLoginLogs();
 
     return NextResponse.json(
       {
