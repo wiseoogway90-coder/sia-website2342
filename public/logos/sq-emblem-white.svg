@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Emblem-only (white) derived from Singapore_Airlines_Logo.svg -->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 468.03644 47.714725"
+   version="1.1"
+   id="sq-emblem-white">
+  <g transform="translate(232.01649,-142.68984)">
+    <g transform="translate(-0.85989583,36.314062)">
+      <path
+         d="m -228.22203,151.72486 c -0.0774,-0.20164 -0.1034,-0.88624 -0.0578,-1.52136 l 0.0828,-1.15474 230.7828028,-0.0663 c 126.9305572,-0.0365 230.7828272,-0.008 230.7828272,0.0644 0,0.0719 -0.50602,0.78585 -1.12448,1.58665 l -1.12448,1.45599 -229.6005071,0.001 C -193.9013,152.0912 -228.10229,152.0368 -228.22203,151.72475 Z"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.26458338" />
+    </g>
+  </g>
+</svg>

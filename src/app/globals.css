@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.info-grid .card {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideUp var(--anim-medium) var(--anim-ease) both;
+}
+.info-grid .card:nth-child(1) { animation-delay: 0.08s; }
+.info-grid .card:nth-child(2) { animation-delay: 0.18s; }
+.info-grid .card:nth-child(3) { animation-delay: 0.28s; }
+.info-grid .card:nth-child(4) { animation-delay: 0.38s; }
+
+.info-grid .card:hover {
+  box-shadow: 0 8px 32px 0 #fcb13033, 0 1.5px 8px 0 #0002;
+  transform: translateY(-2px) scale(1.03);
+  border-color: #fcb130cc;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+.quick-links .group {
+  opacity: 1;
+  transform: scale(1);
+  animation: popIn var(--anim-fast) var(--anim-ease) both;
+}
+.quick-links .group:nth-child(1) { animation-delay: 0.10s; }
+.quick-links .group:nth-child(2) { animation-delay: 0.20s; }
+.quick-links .group:nth-child(3) { animation-delay: 0.30s; }
+.quick-links .group:nth-child(4) { animation-delay: 0.40s; }
+.quick-links .group:nth-child(5) { animation-delay: 0.50s; }
+
+
+.quick-links .group:hover {
+  box-shadow: 0 4px 16px 0 #fcb13033, 0 1.5px 8px 0 #0002;
+  transform: scale(1.04);
+  border-color: #fcb130cc;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0a0e27 0%, #050812 100%);
+  color: #f5f3f0;
+  letter-spacing: 0.5px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer base {
+  h1 { @apply font-bold tracking-tight; }
+  h2 { @apply font-bold tracking-tight; }
+  h3 { @apply font-semibold tracking-tight; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 font-bold rounded-lg transition duration-300 bg-brand-gold text-brand-dark hover:bg-yellow-400 hover:shadow-lg hover:shadow-brand-gold/40 uppercase tracking-wider;
+  }
+  .btn-secondary {
+    @apply px-8 py-3 font-bold rounded-lg transition duration-300 bg-brand-primary text-brand-light hover:border-brand-gold border border-brand-accent uppercase tracking-wider;
+  }
+  .card {
+    @apply bg-brand-primary rounded-lg shadow-lg border border-brand-border hover:border-brand-gold/50 transition duration-300 hover:shadow-brand-gold/20;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(.96); }
+  60% { opacity: 1; transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+:root {
+  --anim-fast: 260ms;
+  --anim-medium: 420ms;
+  --anim-ease: cubic-bezier(.2,.9,.2,1);
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--anim-medium) var(--anim-ease) both;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--anim-medium) var(--anim-ease) both;
+}
+
+.animate-pop-in {
+  animation: popIn var(--anim-fast) var(--anim-ease) both;
+}
+
+.info-grid .card {
+  animation: slideUp var(--anim-medium) var(--anim-ease) both;
+}
+
+.quick-links .group {
+  animation: popIn var(--anim-fast) var(--anim-ease) both;
+}
+
